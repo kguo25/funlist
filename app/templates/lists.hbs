@@ -1,13 +1,13 @@
 
 <center>
 
-<h3>whee list</h3>
+<h3><b>whee list</b></h3>
 
-<ul >
+
 {{#each model as |list|}}
    {{list.title}}<br/>
 {{/each}}
-</ul>
+
 
 {{input value=title placeholder="New Item"}}
 <button {{action "publishList"}}>Add</button>
