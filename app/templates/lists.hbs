@@ -1,8 +1,10 @@
+<h2>New List</h2>  
+<ul class="list-publish">  
+  <li>
+    {{input value=title placeholder="Title"}}
+  </li>
+  <li>
+    <button {{action "publishList"}}>Publish</button>
+  </li>
+</ul>
 {{outlet}}
-
-<div class="form-group row">
-  <label for="example-text-input" class="col-2 col-form-label">Text</label>
-  <div class="col-12">
-    <input class="form-control" type="text" value="Artisanal kale" id="example-text-input">
-  </div>
-</div>
