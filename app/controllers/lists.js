@@ -3,19 +3,20 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   sortProperties: ['timestamp'],
   sortAscending: false, // sorts list by timestamp
+  
   actions: {
-    publishList: function() {
-      var newList = this.store.createRecord('list', {
+    publishItem: function() {
+      var newItem = this.store.createRecord('list', {
         title: this.get('title'),
         timestamp: new Date().getTime()
       });
-      newList.save();
+      newItem.save();
 
       this.setProperties({
         title:""
       })
     },
-    deleteElement: function(listID) {
+    deleteItem: function(listID) {
       this.store.find('list', listID).then(function(rec) {
         rec.destroyRecord();
       });

@@ -6,13 +6,13 @@
 
 {{#each model as |list|}}
    {{list.title}}
-   <button {{action "deleteElement" list.id}}>Delete</button>
+   <button {{action "deleteItem" list.id}}>Delete</button>
    <br/>
 {{/each}}
 
 
 {{input value=title placeholder="New Item"}}
-<button {{action "publishList"}}>Add</button>
+<button {{action "publishItem"}}>Add</button>
 {{outlet}}
 
 </center>
