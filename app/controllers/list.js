@@ -12,22 +12,10 @@ export default Ember.Controller.extend({
       });
 
       this.store.findRecord('list', listID).then(function(list) {
-        alert(list.get('title'));
         var itemz = list.get('items');
         itemz.addObject(newItem);
         list.save();
-         /*
-        .then(function(items) {
-          
-        });
-        list.save();*/
       });
-      // alert(newItem.id);
-      // newItem.save();
-
-      // this.setProperties({
-      //   title:""
-      // })
     },
     deleteItem: function(itemID) {
       this.store.find('item', itemID).then(function(rec) {

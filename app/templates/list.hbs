@@ -1,9 +1,9 @@
 <center>
 
-<h3><b>whee list</b></h3>
+<h3><b>{{model.title}}</b></h3>
 
 
-{{#each model as |item|}}
+{{#each model.items as |item|}}
    {{item.title}}
    <button {{action "deleteItem" item.id}}>Delete</button>
    <br/>
