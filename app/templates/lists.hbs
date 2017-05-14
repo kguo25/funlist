@@ -1,18 +1,25 @@
+<div class="container">
 
-<center>
-
-<h3><b>whee list</b></h3>
-
-
-{{#each model as |list|}}
-   {{list.title}}
-   <button {{action "deleteElement" list.id}}>Delete</button>
-   <br/>
-{{/each}}
+  <div id="list-title">
+    {{input value=listName placeholder=listTitle}}
+    <button {{action "changeName"}}>Change Name</button>
+  </div>
 
 
-{{input value=title placeholder="New Item"}}
-<button {{action "publishList"}}>Add</button>
-{{outlet}}
+  {{#each elements as |element|}}
+    <div id="list-element">
+      <div id="element-title">
+        <p class="h3">{{element.title}}</p>
+      </div>
+      <button class="glyphicon glyphicon-trash btn-primary button" {{action "deleteElement" element.id}}></button>
+    </div>
+  {{/each}}
 
-</center>
+
+  <div id="add-element">
+    {{input value=title placeholder="New Item" class="form-inline"}}
+    <button class="btn-primary button" {{action "publishList"}}>Add</button>
+  </div>
+  {{outlet}}
+
+</div>
