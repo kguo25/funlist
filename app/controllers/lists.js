@@ -14,6 +14,11 @@ export default Ember.Controller.extend({
       this.setProperties({
         title:""
       })
+    },
+    deleteElement: function(listID) {
+      this.store.find('list', listID).then(function(rec) {
+        rec.destroyRecord();
+      });
     }
   }
 });
