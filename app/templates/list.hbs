@@ -1,0 +1,22 @@
+<div class="container">
+
+  <h3><b>{{model.title}}</b></h3>
+
+
+  {{#each model.items as |item|}}
+    <div id="list-element">
+      <div id="element-title">
+        <p>{{item.title}}</p>
+      </div>
+      <button class="glyphicon glyphicon-trash btn-primary button" {{action "deleteElement" item.id}}/>
+    </div>
+  {{/each}}
+
+  <div id="add-element">
+    {{input value=title placeholder="New Item" class="form-inline"}}
+    <button class="btn-primary button" {{action "publishList" model.id}}>Add</button>
+  </div>
+
+  {{outlet}}
+
+</div>
