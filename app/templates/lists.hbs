@@ -5,7 +5,9 @@
 
 
 {{#each model as |list|}}
-   {{list.title}}<br/>
+   {{list.title}}
+   <button {{action "deleteElement" list.id}}>Delete</button>
+   <br/>
 {{/each}}
 
 
