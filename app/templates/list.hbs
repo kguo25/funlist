@@ -7,13 +7,13 @@
       <div id="element-title">
         <p class="h3">{{item.title}}</p>
       </div>
-      <button class="glyphicon glyphicon-trash btn-primary button" {{action "deleteElement" item.id}}></button>
+      <button class="glyphicon glyphicon-check btn-primary button" {{action "deleteElement" item.id}}/>
     </div>
   {{/each}}
 
   <div id="add-element">
     {{input value=title placeholder="New Item" class="form-inline"}}
-    <button class="btn-primary button" {{action "publishItem" model.id}}>Add</button>
+    <button class="glyphicon glyphicon-plus btn-primary button" {{action "publishItem" model.id}}/>
   </div>
   {{outlet}}
 
