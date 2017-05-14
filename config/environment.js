@@ -12,7 +12,7 @@ module.exports = function(environment) {
     firebase: {
       apiKey: 'AIzaSyCfRSzepmN-YN2vF0cN4N7VZ9mea-HU-uk',
       authDomain: 'funlist-8bd1f.firebaseapp.com',
-      databaseURL: 'https://funlist-8bd1f.firebaseio.com',
+      databaseURL: 'https://funlist-8bd1f.firebaseio.com/',
       storageBucket: 'funlist-8bd1f.appspot.com',
     },
 

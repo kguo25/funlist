@@ -1,0 +1,17 @@
+<center>
+
+<h3><b>{{model.title}}</b></h3>
+
+
+{{#each model.items as |item|}}
+   {{item.title}}
+   <button {{action "deleteItem" item.id}}>Delete</button>
+   <br/>
+{{/each}}
+
+
+{{input value=title placeholder="New Item"}}
+<button {{action "publishItem" model.id}}>Add</button>
+{{outlet}}
+
+</center>
