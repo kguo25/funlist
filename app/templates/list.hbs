@@ -1,19 +1,19 @@
 <div class="container">
 
-  <h3><b>{{model.title}}</b></h3>
+  <h3 id="list-title">{{model.title}}</h3>
 
   {{#each model.items as |item|}}
     <div id="list-element">
       <div id="element-title">
-        <p class="h3">{{item.title}}</p>
+        <p class="h4">{{item.title}}</p>
       </div>
-      <button class="glyphicon glyphicon-check btn-primary button" {{action "deleteElement" item.id}}/>
+      <button class="glyphicon glyphicon-check btn-outline-primary button" {{action "deleteElement" item.id}}/>
     </div>
   {{/each}}
 
   <div id="add-element">
     {{input value=title placeholder="New Item" class="form-inline"}}
-    <button class="glyphicon glyphicon-plus btn-primary button" {{action "publishItem" model.id}}/>
+    <button class="glyphicon glyphicon-plus btn-outline-primary button" {{action "publishItem" model.id}}/>
   </div>
   {{outlet}}
 

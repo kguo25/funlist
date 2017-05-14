@@ -5,6 +5,7 @@
 
 .button {
   border-radius: 5px;
+  background-color: white;
 }
 
 body {
@@ -12,15 +13,10 @@ body {
 
 #element-title {
   display: inline-block;
-  width: 30vw;
-  padding: 5px 0 5px 0;
-  border: 3px solid black;
-  border-radius: 5px;
 }
 
 p {
-  padding-left: 10px;
-  padding-bottom: 0.5em;
+  padding: 0 10px 0.5em 10px;
 }
 
 #deleteImage {
@@ -28,9 +24,10 @@ p {
   width:20px;
 }
 
-#list-element {
+#list-element, #add-element {
+  margin:0 0 0 1em;
 }
 
-#list-element, #add-element {
-  margin:10px 0 10px 1em;
+#add-element {
+  margin-top: 1em;
 }
