@@ -1,17 +1,20 @@
-<center>
+<div class="container">
 
-<h3><b>{{model.title}}</b></h3>
+  <h3><b>{{model.title}}</b></h3>
 
+  {{#each model.items as |item|}}
+    <div id="list-element">
+      <div id="element-title">
+        <p class="h3">{{item.title}}</p>
+      </div>
+      <button class="glyphicon glyphicon-trash btn-primary button" {{action "deleteElement" item.id}}></button>
+    </div>
+  {{/each}}
 
-{{#each model.items as |item|}}
-   {{item.title}}
-   <button {{action "deleteItem" item.id}}>Delete</button>
-   <br/>
-{{/each}}
+  <div id="add-element">
+    {{input value=title placeholder="New Item" class="form-inline"}}
+    <button class="btn-primary button" {{action "publishItem" model.id}}>Add</button>
+  </div>
+  {{outlet}}
 
-
-{{input value=title placeholder="New Item"}}
-<button {{action "publishItem" model.id}}>Add</button>
-{{outlet}}
-
-</center>
+</div>
