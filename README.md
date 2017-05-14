@@ -1,3 +1,5 @@
+# Kathy is the best!
+
 # funlist
 
 This README outlines the details of collaborating on this Ember application.
