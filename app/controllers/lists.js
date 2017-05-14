@@ -5,19 +5,28 @@ export default Ember.Controller.extend({
   sortAscending: false, // sorts list by timestamp
   
   actions: {
-    publishItem: function() {
-      var newItem = this.store.createRecord('list', {
+    publishItem: function(listID) {
+      var newItem = this.store.createRecord({
         title: this.get('title'),
         timestamp: new Date().getTime()
       });
-      newItem.save();
 
-      this.setProperties({
-        title:""
-      })
+      this.store.findRecord('list', listID).then(function(list) {
+        alert('ello');
+        list.get('items').then(function(items) {
+          items.addObject(newItem);
+          return list.save();
+        });
+      });
+      // alert(newItem.id);
+      // newItem.save();
+
+      // this.setProperties({
+      //   title:""
+      // })
     },
-    deleteItem: function(listID) {
-      this.store.find('list', listID).then(function(rec) {
+    deleteItem: function(itemID) {
+      this.store.find('item', itemID).then(function(rec) {
         rec.destroyRecord();
       });
     }

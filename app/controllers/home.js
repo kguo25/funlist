@@ -4,7 +4,7 @@ export default Ember.Controller.extend({
   actions: {
     goToList: function() {
 
-      var newList = this.store.createRecord('lists', {
+      var newList = this.store.createRecord('list', {
         title: this.get('title')
       });
       newList.save();
