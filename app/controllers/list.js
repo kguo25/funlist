@@ -6,7 +6,7 @@ export default Ember.Controller.extend({
   
   actions: {
     publishItem: function(listID) {
-      var newItem = this.store.createRecord({
+      var newItem = this.store.createRecord('item', {
         title: this.get('title'),
         timestamp: new Date().getTime()
       });
@@ -15,8 +15,8 @@ export default Ember.Controller.extend({
         alert('ello');
         list.get('items').then(function(items) {
           items.addObject(newItem);
-          return list.save();
         });
+        list.save();
       });
       // alert(newItem.id);
       // newItem.save();

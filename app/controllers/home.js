@@ -9,14 +9,11 @@ export default Ember.Controller.extend({
       });
       newList.save();
 
-      var id = newList.id;
-      alert(id);
-
       this.setProperties({
         title:""
       })
 
-      this.transitionToRoute('lists', newList);
+      this.transitionToRoute('list', newList);
     }
   }
 });
