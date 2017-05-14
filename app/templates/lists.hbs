@@ -1,10 +1,16 @@
-<h2>New List</h2>  
-<ul class="list-publish">  
-  <li>
-    {{input value=title placeholder="Title"}}
-  </li>
-  <li>
-    <button {{action "publishList"}}>Publish</button>
-  </li>
-</ul>
+
+<center>
+
+<h3><b>whee list</b></h3>
+
+
+{{#each model as |list|}}
+   {{list.title}}<br/>
+{{/each}}
+
+
+{{input value=title placeholder="New Item"}}
+<button {{action "publishList"}}>Add</button>
 {{outlet}}
+
+</center>
