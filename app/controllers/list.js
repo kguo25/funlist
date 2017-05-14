@@ -16,6 +16,11 @@ export default Ember.Controller.extend({
         itemz.addObject(newItem);
         list.save();
       });
+
+      this.setProperties({
+        title:""
+      })
+
     },
     deleteItem: function(itemID) {
       this.store.find('item', itemID).then(function(rec) {
