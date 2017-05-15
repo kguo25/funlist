@@ -22,10 +22,8 @@ export default Ember.Controller.extend({
       })
 
     },
-    deleteItem: function(itemID) {
-      this.store.find('item', itemID).then(function(rec) {
-        rec.destroyRecord();
-      });
+    deleteItem: function(item) {
+      item.destroyRecord();
     }
   }
 });
