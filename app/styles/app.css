@@ -1,3 +1,32 @@
+#logo {
+  display: block;
+  margin: 20px auto 20px auto;
+}
+
+#top-bar-text {
+  text-align: center;
+  margin: 20px auto 0 auto;
+  font-size: 1.25em;
+  display: center;
+  color: #000;
+}
+
+hr {
+  display: block;
+  position: relative;
+  padding: 0;
+  margin: auto;
+  height: 0;
+  width: 80%;
+  max-height: 0;
+  font-size: 1px;
+  line-height: 0;
+  clear: both;
+  border: none;
+  border-top: 1px solid #aaaaaa;
+  border-bottom: 1px solid #ffffff;
+}
+
 .navbar-default {
   background-color: #80DED9 ;
   color: #000000;
@@ -16,16 +45,11 @@ body {
 }
 
 p {
-  padding: 0 10px 0.5em 10px;
-}
-
-#deleteImage {
-  height:20px;
-  width:20px;
+  padding: 0;
 }
 
 #list-element, #add-element {
-  margin:0 0 0 1em;
+  margin:0 0 0 3em;
 }
 
 #add-element {
