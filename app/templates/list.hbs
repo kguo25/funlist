@@ -12,8 +12,10 @@
   {{/each}}
 
   <div id="add-element">
-    {{input value=title placeholder="New Item" class="form-inline"}}
-    <button class="glyphicon glyphicon-plus btn-outline-primary button" {{action "publishItem" model}}/>
+    {{input value=title placeholder="New Item" id="add-element-field"}}
+    <button class="funlist-button" {{action "publishItem" model}}>
+      <img id="add-button-image" src="/assets/newitem.png"/>
+    </button>
   </div>
   {{outlet}}
 
